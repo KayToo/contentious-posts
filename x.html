@@ -468,6 +468,14 @@
       line-height: 1.2;
       white-space: nowrap;
     }
+    /* Rank is 16px and the ratio is 18px. The 3px sits the rank on the ratio's baseline.
+       The number and its caption share a left edge. Most recent keeps the right-aligned stacks. */
+    #posts:not(.order-date) .rank {
+      line-height: 1.05;
+      padding-top: 3px;
+    }
+    #posts:not(.order-date) .ratio { align-items: flex-start; }
+    #posts:not(.order-date) .ratio-label { text-align: left; }
     .facts {
       display: grid;
       grid-template-columns: 9.4em 5.2em 5.2em auto auto;
@@ -800,8 +808,7 @@
     .ts-foot time { color: #536471; font-size: 14px; white-space: nowrap; }
     .ts-snapshot { margin: 8px 0 0; color: #536471; font-size: 12px; }
     .ts-card .linkline { margin-top: 8px; }
-  .draft-stamp { margin: 0 0 16px; color: #c0392b; font-size: 36px; font-weight: 750; letter-spacing: 0.08em; line-height: 1; }
-    details.post .title { font-size: 17px; }
+      details.post .title { font-size: 17px; }
 .political-lean-chart { margin: 30px 0 0 26px; max-width: calc(40em - 26px); }
 .political-lean-chart .profile-bar { grid-template-columns: 88px minmax(0, 1fr) 38px; }
 
@@ -881,14 +888,13 @@
 <body>
 <main>
   <header class="report-head">
-    <p class="draft-stamp">DRAFT</p>
     <div class="title-row">
       <h1>Most Contentious X / Twitter Posts</h1>
       <img class="report-mark" src="media/x-mark.png" width="48" height="48" alt="X" />
     </div>
-    <p class="dates">Dates covered: 2025-11-23 to 2026-11-24 · Updated 2026-11-24 5:42 PM EST</p>
+    <p class="dates">Dates covered: 2025-11-23 to 2026-11-24 · Updated 2026-11-24 7:00 PM EST</p>
     <div class="summary">
-      <div><strong>16,018</strong>posts in the window</div>
+      <div><strong>16,029</strong>posts in the window</div>
       <div><strong id="list-count">63</strong>posts on this list</div>
       <div><strong>0.50</strong>median ratio</div>
       <div class="cutoff-pair">
@@ -4822,7 +4828,7 @@ Rain or shine, we’re celebrating our great country no matter what. GOD BLESS A
   </div>
   <p id="tally" class="tally" hidden></p>
   <div id="more" class="more" hidden></div>
-  <p class="meta">Generated 2026-11-24 18:11:35 EST. Regenerate with <code>python scripts/generate_contentious_x_posts_report.py</code>.</p>
+  <p class="meta">Generated 2026-11-24 20:28:03 EST. Regenerate with <code>python scripts/generate_contentious_x_posts_report.py</code>.</p>
 </main>
 <dialog id="fullsize" class="fullsize" aria-label="Full size image"><img alt=""></dialog>
 <script>
